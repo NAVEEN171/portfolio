@@ -1,0 +1,169 @@
+.greeting{
+    font-size: 1.1rem;
+    position:relative;
+    font-weight: 800;
+    color:black;
+    padding:10px 25px;
+    margin-left: 10px;
+    border-radius: 25px;
+    letter-spacing: 1.5px;
+    border:1.5px solid black;
+    display:block;
+    width:fit-content;
+}
+
+.namelabel{
+    font-size: 4rem;
+    font-weight: 800;
+    width: fit-content;
+text-align: center;
+position:relative;
+}
+.name{
+    background: linear-gradient(to bottom,  #0ca3f3 25%, #098ee7 75%);
+    --webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Ensures the text is fully transparent */
+}
+.rating-container{
+    height:fit-content;
+    padding:20px 10px;
+    text-align: center;
+}
+.homewrapper{
+    margin-top:30px;
+    width:100%;
+}
+.home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+ 
+
+}
+.intro{
+    font-size: 1.3rem;
+    width:20%;
+    margin-top:60px;
+    
+    height:fit-content;
+    
+}
+.design{
+    position:absolute;
+    bottom:-57px;
+    left:-90px;
+   
+  
+}
+.design-2{
+    position:absolute;
+    top:-20px;
+    right:-30px;
+}
+.animate1{
+    position:absolute;
+    z-index:4;
+    transform:translate(-28%,-20%);
+   
+    bottom:0px;
+    height:500px;
+    width:450px;
+}
+.option{
+    color:white;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    padding:10px 10px;
+    display:flex;
+    gap:5px;
+    cursor:pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+.selected{
+    transform:scaleX()
+}
+
+.small_opt{
+    background: linear-gradient(115deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    --webkit-backdrop-filter: blur(5px);
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    border-radius: 10px;
+
+    padding:10px 10px;
+    z-index:6;
+    position:absolute;
+    bottom:50px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:10px;
+}
+.animate2{
+    position:absolute;
+    z-index:4;
+   
+    bottom:0px;
+    height:500px;
+    width:400px;
+}
+.animate3{
+    position:absolute;
+    z-index:100;
+    background-image: url("/animate3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:0px;
+    height:200px;
+    width:200px;
+}
+.photo_container{
+    padding-top:30px;
+    display:flex;
+    justify-content: center;
+}
+.portfolio_photo_container{
+display: flex;
+justify-content: space-between;
+height:fit-content;
+}
+
+.circle{
+    position:relative;
+    height:300px;
+    
+    width:600px;
+    border-top-left-radius: 300px;
+    border-top-right-radius:300px ;
+    background:linear-gradient(to bottom right,#0b99ee ,#098ee7 ) ;
+} 
+.proficiency{
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+.portfolio_image{
+    position:absolute;
+    bottom:0px;
+    transform:translateX(-50%);
+    z-index:5;
+    left:50%;
+
+}
+.startsswrapper{
+    display:flex;
+    gap:8px;
+
+}
+.star{
+    width:28px;
+    height:28px;
+    color: #0b99ee;  /* Create a gradient with two colors */
+
+    
+}

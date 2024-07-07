@@ -1,0 +1,23 @@
+.project_photo{
+     border:2px solid yellow;
+     height:350px;
+     width:20%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+
+}
+.projectimage{
+     margin-top: 100px;
+}
+
+.projects_wrapper{
+     background-image: url("/background.png");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-bottom:50px;
+
+     
+}
