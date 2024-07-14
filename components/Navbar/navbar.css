@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .navbarwrapper{
+    position: relative;
     height:90px;
     width:100%;
     display:flex;
@@ -6,6 +9,17 @@
     justify-content: center;
   
     
+}
+
+.bars{
+    height:40px;
+    width:40px;
+    justify-content: center;
+    align-items: center;
+}
+.bar{
+    transition: rotate(0deg);
+    transition: all 0.3s ease-in-out;
 }
 a{
     text-decoration: none;
@@ -16,6 +30,9 @@ a{
 
 
 .navbar{
+    position: fixed;
+    background-color: white;
+    z-index:15;
    padding:10px 30px;
     width:fit-content;
     display:flex;
@@ -47,3 +64,129 @@ li{
     border-radius: 10px;
 
    }
+   .smallnavbar{
+    width:90%;
+    align-items: center;
+
+    display:flex;
+    justify-content: space-between;
+   }
+
+#bar2{
+    background-color: #007fff;
+}
+.smallnavbar{
+    display:none;
+}
+.navbar2{
+    display:none;
+}
+   @media(max-width:700px){
+    .smallnavbar{
+        display:flex;
+    }
+    .navbarwrapper{
+        z-index:9;
+        height:70px;
+        background-color: white;
+
+        position: fixed;
+    }
+    .navbar{
+        display:none;
+    }
+    .navbar2{
+        animation:righttoleft 0.3s ease-in-out;
+        display:flex;
+        position:absolute;
+        justify-content: center;
+        background-color: white;
+        width:50%;
+        right:0px;
+        height:100dvh;
+        top:0px;
+        padding:90px 10px;
+        z-index:10;
+        border-radius: 0px;
+
+
+    }
+    .options{
+        flex-direction: column;
+    }
+
+   }
+
+   .logoname{
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.5rem;
+
+   }
+   .bar{
+    width:20px;
+    height:3px;
+    background-color: black;
+
+   }
+   .bars{
+    z-index:20;
+    cursor:pointer;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+   }
+
+@keyframes righttoleft{
+        0%{
+           width:0%;
+        }
+        100%{
+            width:50%;
+        }
+}
+
+.movebar2{
+    animation: bar2move 0.3s ease-in;
+
+}
+.movebarback{
+    animation: bar2moveback 0.3s ease-in;
+
+}
+
+@keyframes bar2move{
+    0%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+    50%{
+        opacity:1;
+        transform:translateX(-60px);
+    }
+   
+    100%{
+        opacity:0;
+        transform:translateX(-70px);
+
+
+    }
+}
+
+@keyframes bar2moveback{
+    0%{
+        opacity:0;
+        transform:translateX(-60px);
+    }
+    50%{
+        opacity:1;
+        transform:translateX(-30px);
+    }
+   
+    100%{
+        opacity:0;
+        transform:translateX(0px);
+
+
+    }
+}
+

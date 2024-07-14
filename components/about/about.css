@@ -1,5 +1,6 @@
 .About_section{
     text-align: center;
+    padding:70px 0px;
     height:fit-content;
     width:100%;
     background-color: #def7ff;
@@ -14,8 +15,59 @@
     padding-bottom:20px;
     padding-left:80px;
     padding-right:80px;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    word-spacing:0.3rem;
     font-weight: 800;
     color: #434b4d;
+
+}
+
+@media(max-width:1000px) {
+    .About{
+    font-size: 1.4rem;
+    padding:0px 40px;
+    padding-top: 10px;
+    }
+    .About_heading{
+        font-size: 1.7rem;
+    }
+    
+}
+
+@media(max-width:700px){
+    .About{
+        word-spacing: 0.2rem;
+
+        font-size: 1.2rem;
+        padding:0px 30px;
+        padding-top: 10px;
+        }
+        .About_heading{
+            font-size: 1.5rem;
+        }
+
+}
+@media(max-width:500px){
+    .About{
+        font-size: 1rem;
+        padding:0px 20px;
+        padding-top: 10px;
+        }
+        .About_heading{
+            font-size: 1.4rem;
+        }
+
+
+}
+@media(max-width:400px){
+    .About{
+        font-size: 0.8rem;
+        padding:0px 10px;
+        padding-top: 10px;
+        }
+        .About_heading{
+            font-size: 1.3rem;
+        }
+
 
 }
