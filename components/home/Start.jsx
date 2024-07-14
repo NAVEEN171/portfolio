@@ -17,7 +17,7 @@ const Start = () => {
     if(window.innerWidth<=500){
       return{
         initial:{x:100,y:0,opacity:0} ,
-        animate:{x:"-23%",y:"2%",opacity:1},
+        animate:{x:"-16%",y:"2%",opacity:1},
         transition:{duration:0.5,ease: "easeInOut"}
   
        }
@@ -72,7 +72,7 @@ const Start = () => {
      if(window.innerWidth<=500){ 
       return{
       initial:{x:100,y:0,opacity:0} ,
-      animate:{x:"95%",y:"-4%",opacity:1},
+      animate:{x:"93%",y:"-4%",opacity:1},
       transition:{duration:0.5,ease: "easeInOut"}
 
      }
