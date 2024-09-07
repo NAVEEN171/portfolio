@@ -224,7 +224,7 @@ else{
     opacity:0,
    }
    }}
-   initial="initial"yy
+   initial="initial"
    animate={controls}
 
    >
@@ -261,9 +261,8 @@ else{
     </motion.div>
     <motion.div variants={{initial:{y:0},final:{y:-150}}} initial="initial" animate={upcontrol} className='portfolio_photo_container'>
        <div className='intro'>
-        Nice to meet you ,<br/> I'm Naveen <br/> I'm <b>Full Stack Developer</b> 
-       </div>
-       
+      Nice to meet you! <br/>
+       I'm <b>Naveen</b>, <br/> passionate about building <br/> scalable  <b>web apps</b> </div>      
        <div className='rating-container'>
         <div className='starswrapper'>
         {Array.from({length:5}).map((_,index)=>(<MdOutlineStar  key={`${index}star`} className='star' />))}
@@ -276,7 +275,7 @@ else{
         <div className='circle'>
         
          {animate && <motion.img src="/animate1.png" id="animate1" loading="lazy" className="animate1" {...getAnimationProps()} ></motion.img>}
-          <Image className='portfolio_image' width={350} height={450} alt="image" src={"/portfolio_image.png"}></Image>
+          <Image className='portfolio_image' width={350} height={450} alt="image" priority={false} src={"/portfolio_image.png"}></Image>
           {animate && <motion.img src="./animate2.png" loading="lazy" className="animate2" {...getAnimationProps2()}  ></motion.img>}
           <div className='small_opt'>
             <a href="https://drive.google.com/uc?export=download&id=1mVpUl7f6Y-5LpjnPSDUb5U2QkbaMf9Wi" download="Naveen_Resume.pdf"><div className='portfolio_option option' onMouseEnter={()=>{sethovered(1)}} id="portfolio_option" >Resume{hovered===1 && <svg className='arrow' fill="white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>}</div></a>

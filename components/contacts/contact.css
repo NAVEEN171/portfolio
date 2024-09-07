@@ -1,8 +1,14 @@
-.form_container textarea,.form_container  input{
+.form_container  input{
     outline:none;
     border:2px solid #a6a6a6;
     font-size: 0.8rem;
     font-weight: 500;
+}
+.form_container textarea{
+    outline:none;
+    border:2px solid #a6a6a6;
+    font-size: 1rem;
+    font-weight: 400;
 }
 .sendbutton{
     outline:none;
@@ -58,6 +64,9 @@
 .form_container{
     padding:20px 0px;
 }
+.usermessage{
+    font-size:1.5rem;
+}
 .username:focus,.useremail:focus,.usermessage:focus{
     border-color: #3a90ff;
 }
@@ -99,7 +108,11 @@
     padding:15px;
 }
 
-
+@media(max-width:400px){
+    .form_container textarea{
+        font-size: 0.9rem;
+    }
+}
 @media(max-width:800px){
     
     .username,.useremail,.usermessage{
@@ -115,7 +128,7 @@
 
 @media(max-width:500px){
     .contacts_heading{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .usermessage{
         height:140px;

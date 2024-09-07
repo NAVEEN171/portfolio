@@ -15,12 +15,11 @@
     padding-bottom:20px;
     padding-left:80px;
     padding-right:80px;
-    padding:0px 10px;
-text-align: left;
-    font-size: 2.3rem;
+    text-align: left;
+    font-size: 2rem;
     word-spacing:0.3rem;
     font-weight: 800;
-    color: #434b4d;
+    color: black;
 
 }
 
@@ -37,6 +36,9 @@ text-align: left;
 }
 
 @media(max-width:700px){
+    .About_section{
+        padding:45px 0px;
+    }
     .About{
         word-spacing: 0.2rem;
 
@@ -56,7 +58,7 @@ text-align: left;
         padding-top: 10px;
         }
         .About_heading{
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
 
@@ -67,7 +69,7 @@ text-align: left;
         padding-top: 10px;
         }
         .About_heading{
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
 

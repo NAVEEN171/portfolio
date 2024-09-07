@@ -5,13 +5,14 @@ const Contact = () => {
   const [username,setusername]=useState("");
   const [useremail,setuseremail]=useState("");
   const [desc,setdesc]=useState("");
+  const [sent,setsent]=useState(false);
 
   const submithandler=async(e)=>{
     e.preventDefault();
     console.log(username.length)
     if(username.length>0 && useremail.length>0 && desc.length>0){
       try{
-         const res=await fetch("api/sendemail",{
+         let res=await fetch("api/sendemail",{
           method:"POST",
           headers: {
             'Content-Type': 'application/json',
@@ -24,7 +25,15 @@ const Contact = () => {
         
         })
         if(res){
+          res=await res.json();
           console.log(res);
+          if(res.message=="Successfully sent"){
+            setsent(true);
+            setTimeout(() => {
+              setsent(false);
+            }, 2000);
+
+          }
         }
       } 
       catch(err){
@@ -50,11 +59,16 @@ const Contact = () => {
             <input type="text" onChange={(e)=>{setusername(e.target.value)}} className='username' placeholder="Your Name"></input>
             <input type="text" onChange={(e)=>{setuseremail(e.target.value)}} className='useremail' placeholder="Your Email"></input>
             <textarea type="text" onChange={(e)=>{setdesc(e.target.value)}} className='usermessage' placeholder="message"></textarea>
-            <button className='sendbutton' type="submit" onClick={(e)=>{submithandler(e)}}>
+           {!sent &&<button className='sendbutton' type="submit" onClick={(e)=>{submithandler(e)}}>
             <svg className='sendicon' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1792 1792"><path fill="currentColor" d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45q-14 8-31 8q-11 0-24-5l-453-185l-242 295q-18 23-49 23q-13 0-22-4q-19-7-30.5-23.5T640 1728v-349l864-1059l-1069 925l-395-162q-37-14-40-55q-2-40 32-59L1696 9q15-9 32-9q20 0 36 11"/></svg>
-
-                Send message
-            </button>
+             submit
+              
+            </button>}
+            {sent &&<button className='sendbutton' type="submit" >
+              <svg xmlns="http://www.w3.org/2000/svg" className='sendicon' height="1em" width="1em" viewBox="0 -960 960 960" fill="#e8eaed"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+            Done
+              
+            </button>}
 
         </div>
         <div className='contact_icons'>

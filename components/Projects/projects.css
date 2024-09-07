@@ -263,10 +263,13 @@ flex-direction: column;
      }
 
 }
-@media(max-width:400px){
+@media(max-width:500px){
      .container_name{
-          font-size: 1.5rem;
+          font-size: 1.3rem;
      }
+     }
+@media(max-width:400px){
+     
      .projects_wrapper{
           padding:20px 20px;
      }

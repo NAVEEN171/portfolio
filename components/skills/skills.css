@@ -101,6 +101,9 @@ h2{
 
 }
 @media(max-width:500px){
+    .skills_heading{
+        font-size: 1.3rem;
+    }
     .skills_bottom h2{
         font-size: 1rem;
 
