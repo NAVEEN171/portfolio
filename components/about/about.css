@@ -17,9 +17,10 @@
     padding-right:80px;
     text-align: left;
     font-size: 2rem;
+    line-height: 1.4;
     word-spacing:0.3rem;
     font-weight: 800;
-    color: black;
+    color: #333333;
 
 }
 
@@ -53,6 +54,7 @@
 }
 @media(max-width:500px){
     .About{
+        line-height:1.1;
         font-size: 1rem;
         padding:0px 20px;
         padding-top: 10px;

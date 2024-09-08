@@ -119,6 +119,7 @@
         width:90%;
     }
     .email{
+        letter-spacing: 0.09rem;
         font-size: 0.8rem;
     }
     .sendbutton{
