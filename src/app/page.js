@@ -9,9 +9,7 @@ import About from "../../components/about/About";
 import Projects from "../../components/Projects/Projects";
 import Skills from "../../components/skills/Skills";
 import Contact from "../../components/contacts/Contact";
-import { useEffect, useRef,useState } from "react";
 export default function Home() {
-  
   return (
    <main className="portfoliocontainer" >
       <Navbar />
