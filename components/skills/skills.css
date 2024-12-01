@@ -4,9 +4,9 @@
     height:250px;
     width:calc((100% - 50px)/6);
     
-    border-left:15px solid #119ff9;
-    border-right:15px solid #119ff9;
-    border-top:15px solid #119ff9;
+    border-left:15px solid #098ee7;
+    border-right:15px solid #098ee7;
+    border-top:15px solid #098ee7;
 
 
     
@@ -54,7 +54,7 @@ h2{
     position: relative;
     z-index:4;
     height:calc(30% + 0.5px);
-    background-color: #119ff9;
+    background-color: #098ee7;
     border:none;
     padding-top:10px ;
     display:flex;
