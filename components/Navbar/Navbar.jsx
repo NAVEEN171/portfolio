@@ -1,9 +1,101 @@
 import React from 'react'
 import "./navbar.css";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 const Navbar = () => {
   const [selected,setselected]=useState("Home");
   const [show,setshow]=useState(false);
+  
+
+  const scrollHandler=()=>{
+    console.log(window.scrollY);
+     let navbar=document.getElementById("navwrapper");  
+     let navbarheight;
+     let bottomcontainer=document.querySelector(".bottomcontainer");
+     let bottomconheight;
+     let top;
+     let header=document.querySelector(".portfolio-wrapper");
+     let headerheight,aboutheight,projectheight,skillsheight,contactheight;
+     if(header){
+      console.log("header height is:")
+      headerheight=header.offsetHeight;
+      console.log(header.offsetHeight);
+     } 
+     //About_section
+     let about=document.querySelector(".About_section");
+     if(about){
+      console.log("About_section is:");
+      aboutheight=about.offsetHeight;
+      console.log(about.offsetHeight);
+     } 
+     //projects_container
+     let projects=document.querySelector(".projects_container");
+     if(projects){
+      console.log("project_section is:")
+      projectheight=projects.offsetHeight
+      console.log(projects.offsetHeight);
+     } 
+     //Skills_section
+     let skills=document.querySelector(".Skills_section");
+     if(skills){
+      console.log("skills  is:")
+      skillsheight=skills.offsetHeight;
+      console.log(skills.offsetHeight);
+     } 
+     //contacts_container
+     let contacts=document.querySelector(".contacts_container");
+     if(contacts){
+      contactheight=contacts.offsetHeight;
+      console.log("contacts  is:")
+      console.log(contacts.offsetHeight);
+     } 
+     
+     if(bottomcontainer){
+      let bottomstyles=window.getComputedStyle(bottomcontainer);
+      top=parseInt(bottomstyles.getPropertyValue("margin-top"));
+      console.log(top);
+     console.log(bottomcontainer.offsetHeight)
+     }
+     if(navbar){
+      navbarheight=navbar.offsetHeight;
+      console.log("navbar height is : ")
+      console.log(navbarheight);
+     }  
+     let upheight=navbarheight+top+headerheight;
+
+     if(window.scrollY<upheight-90){
+      setselected("Home");
+     }
+     else if(window.scrollY>(upheight-90) && window.scrollY<=upheight+aboutheight-(window.innerWidth<350?100:70)){
+      setselected("About");
+     }
+     else if(window.scrollY>aboutheight+upheight-(window.innerWidth<350?100:70) && window.scrollY<=projectheight+upheight+aboutheight-70){
+      setselected("Projects");
+
+     }
+     else if(window.scrollY>projectheight+upheight+aboutheight-70 && window.scrollY<=projectheight+upheight+aboutheight+skillsheight-(window.innerWidth>700?180:280)){
+      setselected("Skills")
+     }
+     else if(window.innerWidth<=700 && projectheight+skillsheight+aboutheight+upheight-280){
+      setselected("Contact")
+     }
+     else if(window.scrollY>projectheight+skillsheight+aboutheight+upheight-180){
+      setselected("Contact")
+     }
+     
+     else{
+      setselected("Home");
+     }
+     console.log("scroll height is:")
+     console.log(window.scrollY);
+     console.log("calculated height is");
+     console.log(projectheight+skillsheight+aboutheight+upheight-180)
+  }
+  
+
+  useEffect(()=>{
+    window.addEventListener("scroll",scrollHandler);
+
+  },[])
   const barshandler=()=>{
     setshow(!show);
 
@@ -79,24 +171,24 @@ const Navbar = () => {
        
 
         <ul className='options' >
-        <a className={selected==="Home"?"atagcolor":""} href="#Home" ><li  className={selected==="Home"?"litagcolor":""} onClick={()=>{setselected("Home");handler()}} >Home</li></a>
-        <a className={selected==="About"?"atagcolor":""} href="#About"><li className={selected==="About"?"litagcolor":""} onClick={()=>{setselected("About")} } >About </li> </a>
-        <a className={selected==="Projects"?"atagcolor":""} href="#Projects"><li className={selected==="Projects"?"litagcolor":""} onClick={()=>{setselected("Projects")} } >Projects</li></a>
-        <a  className={selected==="Skills"?"atagcolor":""} href="#Skills"> <li className={selected==="Skills"?"litagcolor":""} onClick={()=>{setselected("Skills")} } >Skills</li></a>
+        <a className={selected==="Home"?"atagcolor":""} href="#Home" ><li  className={selected==="Home"?"litagcolor":""} onClick={()=>{handler();barshandler()}} >Home</li></a>
+        <a className={selected==="About"?"atagcolor":""} href="#About"><li className={selected==="About"?"litagcolor":""} onClick={()=>{barshandler()} } >About </li> </a>
+        <a className={selected==="Projects"?"atagcolor":""} href="#Projects"><li className={selected==="Projects"?"litagcolor":""} onClick={()=>{barshandler()}}  >Projects</li></a>
+        <a  className={selected==="Skills"?"atagcolor":""} href="#Skills"> <li className={selected==="Skills"?"litagcolor":""} onClick={()=>{barshandler()} } >Skills</li></a>
         
-        <a className={selected==="Contact"?"atagcolor":""} href="#Contact"><li className={selected==="Contact"?"litagcolor":""} onClick={()=>{setselected("Contact")}} >Contact</li></a>
+        <a className={selected==="Contact"?"atagcolor":""} href="#Contact"><li className={selected==="Contact"?"litagcolor":""} onClick={()=>{barshandler()}} >Contact</li></a>
         </ul>
        </nav>}
        {show && <nav className='navbar2' id="navbar" >
        
 
        <ul className='options' >
-       <a className={selected==="Home"?"atagcolor":""} href="#Home" ><li  className={selected==="Home"?"litagcolor":""} onClick={()=>{setselected("Home");handler();barshandler()}} >Home</li></a>
-       <a className={selected==="About"?"atagcolor":""} href="#About"><li className={selected==="About"?"litagcolor":""} onClick={()=>{setselected("About");barshandler()} } >About </li> </a>
-       <a className={selected==="Projects"?"atagcolor":""} href="#Projects"><li className={selected==="Projects"?"litagcolor":""} onClick={()=>{setselected("Projects");barshandler()} } >Projects</li></a>
-       <a  className={selected==="Skills"?"atagcolor":""} href="#Skills"> <li className={selected==="Skills"?"litagcolor":""} onClick={()=>{setselected("Skills");barshandler()} } >Skills</li></a>
+       <a className={selected==="Home"?"atagcolor":""} href="#Home" ><li  className={selected==="Home"?"litagcolor":""} onClick={()=>{handler();barshandler()}} >Home</li></a>
+       <a className={selected==="About"?"atagcolor":""} href="#About"><li className={selected==="About"?"litagcolor":""} onClick={()=>{barshandler()} } >About </li> </a>
+       <a className={selected==="Projects"?"atagcolor":""} href="#Projects"><li className={selected==="Projects"?"litagcolor":""} onClick={()=>{barshandler()} } >Projects</li></a>
+       <a  className={selected==="Skills"?"atagcolor":""} href="#Skills"> <li className={selected==="Skills"?"litagcolor":""} onClick={()=>{barshandler()} } >Skills</li></a>
        
-       <a className={selected==="Contact"?"atagcolor":""} href="#Contact"><li className={selected==="Contact"?"litagcolor":""} onClick={()=>{setselected("Contact");barshandler()}} >Contact</li></a>
+       <a className={selected==="Contact"?"atagcolor":""} href="#Contact"><li className={selected==="Contact"?"litagcolor":""} onClick={()=>{barshandler()}} >Contact</li></a>
        </ul>
       </nav>}
     </div>
