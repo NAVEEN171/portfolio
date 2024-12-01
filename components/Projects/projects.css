@@ -254,7 +254,7 @@ flex-direction: column;
           width:100%;
      }
      .project_photo{
-          height:350px;
+          height:360px;
      }
      .arrow_project{
           height:60px;
@@ -272,9 +272,10 @@ flex-direction: column;
      
      .projects_wrapper{
           padding:20px 20px;
+          gap:25px;
      }
      .project_photo{
-          height:350px;
+          height:360px;
      }
      .arrow_project{
           height:50px;
