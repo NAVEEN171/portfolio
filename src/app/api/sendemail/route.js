@@ -2,11 +2,11 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
-  console.log("middleware running");
+  // console.log("middleware running");
   try {
     let bodyparsed = await req.json();
     let { name, email, message } = bodyparsed;
-    console.log(email);
+    // console.log(email);
 
     let transporter = nodemailer.createTransport({
       service: "gmail",
@@ -21,7 +21,7 @@ export async function POST(req) {
 
     let mailOptions = {
       from: `"Your Website Contact Form" <${process.env.EMAIL_USER}>`,
-      to: 'naveenkumar171837@gmail.com',
+      to: "naveenkumar171837@gmail.com",
       replyTo: `${name} <${email}>`,
       subject: `New message from ${name} (${email})`,
       text: `Name: ${name}\nEmail: ${email}\n: ${message}`,
@@ -30,11 +30,11 @@ export async function POST(req) {
              <p> ${message}</p>`,
     };
 
-    console.log(mailOptions.from);
+    // console.log(mailOptions.from);
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ message: "Successfully sent" });
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     return NextResponse.json({ message: "Failed" }, { status: 500 });
   }
 }

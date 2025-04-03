@@ -17,7 +17,7 @@ const Start = () => {
 
   useEffect(() => {
     let stars = document.querySelectorAll(".star");
-    console.log(stars);
+    // console.log(stars);
     const interval = setInterval(() => {
       if (currentStar === 5) {
         stars.forEach((star) => {
@@ -139,9 +139,9 @@ const Start = () => {
 
   useEffect(() => {
     const resizehandler = () => {
-      console.log("resize");
+      // console.log("resize");
       if (window.innerWidth > 900) {
-        console.log("true");
+        // console.log("true");
       }
 
 
@@ -186,11 +186,11 @@ const Start = () => {
   useEffect(() => {
     let navbar = document.getElementById("navwrapper");
     let home = document.getElementById("homewrapper");
-    console.log(navbar);
+    // console.log(navbar);
 
     let computedStyle = window.getComputedStyle(navbar);
     let heightValue = computedStyle.getPropertyValue('height');
-    console.log(heightValue)
+    // console.log(heightValue)
     let computedStyle1 = window.getComputedStyle(home);
     let homeHeight = computedStyle1.getPropertyValue('height');
     let animate1 = document.getElementById("animate1");
@@ -198,18 +198,18 @@ const Start = () => {
     animateheight = parseInt(animateheight)
     homeHeight = parseInt(homeHeight);
     heightValue = parseInt(heightValue);
-    console.log(homeHeight);
+    // console.log(homeHeight);
     let actualheight;
     actualheight = homeHeight + heightValue + 30;
     heightValue = homeHeight + heightValue - window.innerHeight;
 
 
     const scrollhandler = () => {
-      console.log(` actual height is ${actualheight}`);
+      // console.log(` actual height is ${actualheight}`);
 
 
 
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       ;
       if (window.scrollY === 0) {
         setanimate(false)
