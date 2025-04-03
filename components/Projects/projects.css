@@ -9,6 +9,7 @@
   flex-direction: column;
   z-index: 4;
 }
+
 .techstack {
   color: white;
   padding-top: 10px;
@@ -29,7 +30,10 @@
 .project_heading {
   padding: 10px 5px;
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
+
   gap: 10px;
   border-right: 2px solid rgba(255, 255, 255, 0.5);
   border-left: 2px solid rgba(255, 255, 255, 0.5);
@@ -37,9 +41,19 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+.project_subheader {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 .heading {
   color: white;
   font-size: 1.2rem;
+}
+.description {
+  color: white;
+  font-size: 0.9rem;
 }
 .project_up {
   position: relative;

@@ -19,7 +19,8 @@ const Projects = () => {
       path: "/job_board.png",
       githuburl: "https://github.com/NAVEEN171/Job_board",
       livelink: "https://job-board-rust-alpha.vercel.app",
-      TechStack: "Nextjs  Typescript,Tailwind Mongodb"
+      TechStack: "Nextjs  Typescript,Tailwind Mongodb",
+      description: "Built a custom job board with advanced filters, AI powered resume tailoring, and a secure MongoDB backend with JWT authentication"
 
     },
     {
@@ -27,7 +28,8 @@ const Projects = () => {
       path: "/pathfindingvisualizer.png",
       githuburl: "https://github.com/NAVEEN171/PathFinding_Visualizer",
       livelink: "https://naveen171.github.io/PathFinding_Visualizer/",
-      TechStack: "React JS"
+      TechStack: "React JS",
+      description: "Built an interactive pathfinding visualizer with BFS, DFS, Dijkstra, A*, and maze generation algorithms "
 
     },
     {
@@ -35,35 +37,31 @@ const Projects = () => {
       path: "/chatapp.png",
       githuburl: "https://github.com/NAVEEN171/chat_app",
       livelink: "https://chat-app-five-dun.vercel.app/",
-      TechStack: "MERN STACK"
-
-
+      TechStack: "MERN STACK",
+      description: "Built a real-time chat application with authentication, online/offline status, user photo updates, and latest-first message sorting, using MongoDB and sockets."
     }, {
       name: "Landing Page",
       path: "/applyai.png",
       githuburl: "https://github.com/NAVEEN171/apply_ai",
       livelink: "https://apply-ai-pro.vercel.app/",
-      TechStack: "Next JS"
-
-
+      TechStack: "Next JS",
+      description: ""
     },
     {
       name: "Tic-Tac-Toe",
       path: "/tictactoe.png",
       githuburl: "https://github.com/NAVEEN171/Tic-Tac-Toe",
       livelink: "https://naveen171.github.io/Tic-Tac-Toe/",
-      TechStack: "JavaScript"
-
-
+      TechStack: "JavaScript",
+      description: ""
     },
     {
       name: "Memory Game",
       path: "/memorygame.png",
       githuburl: "https://github.com/NAVEEN171/memorygame",
       livelink: "https://naveen171.github.io/memorygame/",
-      TechStack: "JavaScript"
-
-
+      TechStack: "JavaScript",
+      description: ""
     }
   ]
   return (
@@ -71,11 +69,18 @@ const Projects = () => {
       <h1 className='container_name  '>My Project Works</h1>
       <div className='projects_wrapper'>
         {projectslist.map((project, index) => (<div className='project' onMouseLeave={() => { hoverhandler(null) }} onMouseEnter={() => { hoverhandler(index) }} key={project.name}><div className='project_heading'>
-          <h1 className='heading'>{project.name}
+          <div className='project_subheader'>
+            <h1 className='heading'>{project.name}
 
-          </h1>
-          <a href={project.githuburl}><SiGithub className='github_icon' /></a>
+            </h1>
+
+            <a href={project.githuburl}><SiGithub className='github_icon' /></a>
+          </div>
+          {project.description && <h2 className='description'>{project.description}
+          </h2>}
+
         </div>
+
           <div className='project_subheading'>
             <div className='photowrapper'>
               <div className='project_photo'>
