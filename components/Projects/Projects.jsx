@@ -47,6 +47,9 @@ const Projects = () => {
       TechStack: "Next JS",
       description: ""
     },
+
+  ]
+  const deletedProjects = [
     {
       name: "Tic-Tac-Toe",
       path: "/tictactoe.png",
@@ -63,6 +66,7 @@ const Projects = () => {
       TechStack: "JavaScript",
       description: ""
     }
+
   ]
   return (
     <div className='projects_container' id="Projects">
