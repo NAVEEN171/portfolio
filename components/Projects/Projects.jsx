@@ -81,7 +81,7 @@ const Projects = () => {
               <div className='project_photo'>
                 <div className='project_up'>
                   {index === hover &&
-                    <div>{project.TechStack.split(",").map((technology) => <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className='techstack'>{technology}</motion.h2>)}</div>}
+                    <div>{project.TechStack.split(",").map((technology, idx) => <motion.h2 key={idx} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className='techstack'>{technology}</motion.h2>)}</div>}
                 </div>
                 <div className='box'></div>
                 <div className='box2'></div>
