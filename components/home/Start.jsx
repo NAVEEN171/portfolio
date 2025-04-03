@@ -13,6 +13,27 @@ const Start = () => {
   const upcontrol = useAnimationControls();
   const [animate, setanimate] = useState(false);
   const [hovered, sethovered] = useState(1);
+  const [currentStar, setCurrentStar] = useState(0);
+
+  useEffect(() => {
+    let stars = document.querySelectorAll(".star");
+    console.log(stars);
+    const interval = setInterval(() => {
+      if (currentStar === 5) {
+        stars.forEach((star) => {
+          star.style.color = "gray";
+        })
+        setCurrentStar(0);
+      }
+      else {
+        stars[currentStar].style.color = "#0b99ee";
+        setCurrentStar(currentStar + 1);
+      }
+
+    }, 500)
+    return () => clearInterval(interval);
+  })
+
   const getAnimationProps = () => {
     if (window.innerWidth <= 500) {
       return {
@@ -266,7 +287,7 @@ const Start = () => {
             I'm <b>Naveen</b>, <br /> passionate about building <br /> scalable  <b>web apps</b> </div>
           <div className='rating-container'>
             <div className='starswrapper'>
-              {Array.from({ length: 5 }).map((_, index) => (<MdOutlineStar key={`${index}star`} className='star' />))}
+              {Array.from({ length: 5 }).map((_, index) => (<MdOutlineStar key={`${index}star`} style={{ color: "gray" }} className='star' />))}
 
             </div>
             <div className='proficiency'>Freelancer</div>

@@ -1,392 +1,371 @@
-.greeting{
-    font-size: 1.1rem;
-    position:relative;
-    font-weight: 800;
-    color:black;
-    padding:10px 25px;
-    margin-left: 10px;
-    border-radius: 25px;
-    letter-spacing: 1.5px;
-    border:1.5px solid black;
-    display:block;
-    width:fit-content;
+.greeting {
+  font-size: 1.1rem;
+  position: relative;
+  font-weight: 800;
+  color: black;
+  padding: 10px 25px;
+  margin-left: 10px;
+  border-radius: 25px;
+  letter-spacing: 1.5px;
+  border: 1.5px solid black;
+  display: block;
+  width: fit-content;
 }
-.home_container{
-    position: relative;
-    z-index: 5;
-    width:100%;
-
+.home_container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
 }
-.namelabel{
-    font-size: 3.5rem;
-    font-weight: 800;
-    width: fit-content;
-text-align: center;
-position:relative;
+.namelabel {
+  font-size: 3.5rem;
+  font-weight: 800;
+  width: fit-content;
+  text-align: center;
+  position: relative;
 }
 .name {
-    background: linear-gradient(to bottom, #0ca3f3 25%, #098ee7 75%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;/* Ensures the text is fully transparent */
+  background: linear-gradient(to bottom, #0ca3f3 25%, #098ee7 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Ensures the text is fully transparent */
+}
+
+.rating-container {
+  height: fit-content;
+  padding: 20px 10px;
+  text-align: center;
+}
+.homewrapper {
+  margin-top: 30px;
+  width: 100%;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.intro {
+  font-size: 1.3rem;
+  width: 20%;
+  margin-top: 60px;
+
+  height: fit-content;
+}
+.design {
+  position: absolute;
+  bottom: -57px;
+  left: -90px;
+}
+.design-2 {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+}
+.animate1 {
+  position: absolute;
+  z-index: 4;
+  transform: translate(-25%, -18%);
+
+  bottom: 0px;
+  height: 500px;
+  width: 450px;
+}
+.option {
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  padding: 10px 10px;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.selected {
+  transform: scaleX();
+}
+
+.small_opt {
+  width: fit-content;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  --webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+
+  padding: 10px 10px;
+  z-index: 6;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.animate2 {
+  position: absolute;
+  z-index: 4;
+
+  bottom: 0px;
+  height: 500px;
+  width: 400px;
+}
+.animate3 {
+  position: absolute;
+  z-index: 100;
+  background-image: url("/animate3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  height: 200px;
+  width: 200px;
+}
+.photo_container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.portfolio_photo_container {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.circle {
+  position: relative;
+  height: 300px;
+
+  width: 600px;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  background: linear-gradient(to bottom right, #0b99ee, #098ee7);
+}
+.proficiency {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.portfolio_image {
+  position: absolute;
+  bottom: 0px;
+  transform: translateX(-50%);
+  z-index: 5;
+  left: 50%;
+}
+.option {
+  height: fit-content;
+}
+.startsswrapper {
+  display: flex;
+  gap: 8px;
+}
+.star {
+  width: 28px;
+  height: 28px;
+  color: gray; /* Create a gradient with two colors */
+}
+
+@media (max-width: 1200px) {
+  .namelabel {
+    font-size: 3rem;
   }
-  
-.rating-container{
-    height:fit-content;
-    padding:20px 10px;
-    text-align: center;
+  .intro {
+    width: 35%;
+  }
 }
-.homewrapper{
-    margin-top:30px;
-    width:100%;
+@media (max-width: 1050px) {
+  .intro {
+    font-size: 1.1rem;
+  }
 }
-.home{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
- 
-
+@media (max-width: 950px) {
+  .portfolio_image {
+    width: 300px;
+  }
+  .animate1,
+  .animate2 {
+    width: 300px;
+  }
 }
-.intro{
-    font-size: 1.3rem;
-    width:20%;
-    margin-top:60px;
-    
-    height:fit-content;
-    
+@media (max-width: 750px) {
+  .intro {
+    font-size: 1rem;
+  }
 }
-.design{
-    position:absolute;
-    bottom:-57px;
-    left:-90px;
-   
-  
-}
-.design-2{
-    position:absolute;
-    top:-20px;
-    right:-30px;
-}
-.animate1{
-    position:absolute;
-    z-index:4;
-    transform:translate(-25%,-18%);
-   
-    bottom:0px;
-    height:500px;
-    width:450px;
-}
-.option{
-    align-items: center;
-    color:white;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    padding:10px 10px;
-    display:flex;
-    gap:5px;
-    cursor:pointer;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-.selected{
-    transform:scaleX()
+@media (max-width: 600px) {
+  .intro {
+    font-size: 0.8rem;
+  }
 }
 
-.small_opt{
-    width:fit-content;
-    background: linear-gradient(115deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
-    --webkit-backdrop-filter: blur(5px);
-    border:1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
-    border-radius: 10px;
-
-    padding:10px 10px;
-    z-index:6;
-    position:absolute;
-    bottom:50px;
-    left:50%;
-    transform:translateX(-50%);
-    display:flex;
-    gap:10px;
-}
-.animate2{
-    position:absolute;
-    z-index:4;
-   
-    bottom:0px;
-    height:500px;
-    width:400px;
-}
-.animate3{
-    position:absolute;
-    z-index:100;
-    background-image: url("/animate3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top:0px;
-    height:200px;
-    width:200px;
-}
-.photo_container{
-    padding-top:30px;
-    display:flex;
-    justify-content: center;
-}
-.portfolio_photo_container{
-display: flex;
-justify-content: space-between;
-height:fit-content;
+@media (max-width: 700px) {
+  .circle {
+    width: 500px;
+    height: 250px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+  .portfolio_image {
+    height: 400px;
+  }
+  .option {
+    font-size: 1rem;
+  }
+  .animate1,
+  .animate2 {
+    height: 450px;
+    width: 250px;
+  }
+  .namelabel {
+    font-size: 2.7rem;
+  }
+  .design {
+    height: 70px;
+    width: 70px;
+    left: -63px;
+    bottom: -49px;
+  }
 }
 
-.circle{
-    position:relative;
-    height:300px;
-    
-    width:600px;
-    border-top-left-radius: 300px;
-    border-top-right-radius:300px ;
-    background:linear-gradient(to bottom right,#0b99ee ,#098ee7 ) ;
-} 
-.proficiency{
+@media (max-width: 650px) {
+  .small_opt {
+    bottom: 35px;
+  }
+  .proficiency {
+    font-size: 1.4rem;
+  }
+  .namelabel {
+    font-size: 2rem;
+  }
+  .circle {
+    width: 400px;
+    height: 200px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+  .portfolio_image {
+    height: 350px;
+    width: 200px;
+  }
+  .option {
+    font-size: 0.8rem;
+  }
+  .animate1,
+  .animate2 {
+    height: 400px;
+    width: 200px;
+  }
+
+  .design {
+    height: 60px;
+    width: 60px;
+    left: -56px;
+    bottom: -38px;
+  }
+  .arrow {
+    height: 20px;
+    width: 20px;
+  }
+  .option {
+    padding: 5px 5px;
+  }
+  .small_opt {
+    padding: 5px 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  .greeting {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .star {
+    width: 24px;
+    height: 24px;
+  }
+  .design-2 {
+    width: 25px;
+    height: 25px;
+    right: -23px;
+  }
+  .design {
+    height: 45px;
+    width: 45px;
+    left: -45px;
+    bottom: -29px;
+  }
+  .circle {
+    width: 300px;
+    height: 150px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+  }
+  .portfolio_image {
+    height: 250px;
+    width: 200px;
+  }
+  .animate1,
+  .animate2 {
+    height: 300px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio_image {
+    height: 250px;
+    width: 150px;
+  }
+  .animate1,
+  .animate2 {
+    height: 280px;
+    width: 150px;
+  }
+  .option {
+    font-size: 0.9rem;
+    gap: 2px;
+    white-space: nowrap;
+  }
+  .small_opt {
+    bottom: 20px;
+  }
+  .arrow {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .namelabel {
     font-size: 1.7rem;
-    font-weight: bold;
-
-}
-.portfolio_image{
-    position:absolute;
-    bottom:0px;
-    transform:translateX(-50%);
-    z-index:5;
-    left:50%;
-
-}
-.option{
-    height:fit-content;
-}
-.startsswrapper{
-    display:flex;
-    gap:8px;
-
-}
-.star{
-    width:28px;
-    height:28px;
-    color: #0b99ee;  /* Create a gradient with two colors */
-
-    
+  }
+  .design {
+    height: 35px;
+    width: 35px;
+    left: -29px;
+    bottom: -20px;
+  }
+  .proficiency {
+    font-size: 1.1rem;
+  }
+  .star {
+    height: 20px;
+    width: 20px;
+  }
 }
 
-@media(max-width:1200px){
-    .namelabel{
-        font-size: 3rem;
-    }
-    .intro{
-        width:35%;
-    }
-}
-@media(max-width:1050px){
-    .intro{
-        font-size: 1.1rem;
-    }
-
-}
-@media(max-width:950px){
-    
-    .portfolio_image{
-        width:300px;
-    }
-    .animate1,.animate2{
-        width:300px;
-    }
-   
-}@media(max-width:750px){
-    .intro{
-        font-size: 1rem;
-    }
-}
-@media(max-width:600px){
-    .intro{
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width:700px){
-    .circle{
-        width:500px;
-        height:250px;
-        border-top-left-radius: 250px;
-        border-top-right-radius: 250px;
-
-    }
-    .portfolio_image{
-        height:400px;
-    }
-    .option{
-        font-size: 1rem;
-    }
-    .animate1,.animate2{
-        height:450px;
-        width:250px;
-
-    }
-    .namelabel{
-        font-size: 2.7rem;
-    }
-    .design{
-        height:70px;
-        width:70px;
-        left:-63px;
-        bottom:-49px;
-    }
-}
-
-@media(max-width:650px){
-    .small_opt{
-        bottom:35px;
-    }
-    .proficiency{
-        font-size: 1.4rem;
-    }
-    .namelabel{
-        font-size: 2rem;
-    }
-    .circle{
-        width:400px;
-        height:200px;
-        border-top-left-radius: 200px;
-        border-top-right-radius: 200px;
-
-    }
-    .portfolio_image{
-        height:350px;
-        width:200px;
-    }
-    .option{
-        font-size: 0.8rem;
-    }
-    .animate1,.animate2{
-        height:400px;
-        width:200px;
-
-    }
-    
-    .design{
-        height:60px;
-        width:60px;
-        left:-56px;
-        bottom:-38px;
-    }
-    .arrow{
-        height:20px;
-        width:20px;
-
-    }
-    .option{
-        padding:5px 5px;
-    }
-    .small_opt{
-        padding:5px 5px;
-    }
-}
-
-
-
-@media(max-width:550px){
-    .greeting{
-        font-size: 0.9rem;
-        padding:10px 20px;
-
-    }
-    .star{
-        width:24px;
-        height:24px;
-    }
-    .design-2{
-        width:25px;
-        height:25px;
-        right:-23px;
-
-    }
-    .design{
-        height:45px;
-        width:45px;
-        left:-45px;
-        bottom:-29px;
-    }
-    .circle{
-        width:300px;
-        height:150px;
-        border-top-right-radius: 150px;
-        border-top-left-radius: 150px;
-    }
-    .portfolio_image{
-        height:250px;
-        width:200px;
-    }
-    .animate1,.animate2{
-        height:300px;
-        width:200px;
-
-
-    }
-}
-
-@media(max-width:500px){
-    
-    .portfolio_image{
-        height:250px;
-        width:150px;
-    }
-    .animate1,.animate2{
-        height:280px;
-        width:150px;
-
-
-    }
-    .option{
-        font-size: 0.9rem;
-        gap:2px;
-        white-space: nowrap;
-
-    }
-    .small_opt{
-        bottom:20px;
-    }
-    .arrow{
-        height:16px;
-        width:16px;
-    }
-}
-
-
-@media(max-width:450px){
-    .namelabel{
-        font-size: 1.7rem;
-    }
-    .design{
-        height:35px;
-        width:35px;
-        left:-29px;
-        bottom:-20px;
-    }
-    .proficiency{
-        font-size: 1.1rem;
-    }
-    .star{
-        height:20px;
-        width:20px;
-    }
-}
-
-@media(max-width:400px){
-    .namelabel{
-        font-size: 1.6rem;
-    }
-    .greeting{
-        font-size: 0.8rem;
-        padding:9px 15px;
-    }
-
+@media (max-width: 400px) {
+  .namelabel {
+    font-size: 1.6rem;
+  }
+  .greeting {
+    font-size: 0.8rem;
+    padding: 9px 15px;
+  }
 }
