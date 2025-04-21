@@ -19,7 +19,7 @@ const Projects = () => {
       path: "/job_board.png",
       githuburl: "https://github.com/NAVEEN171/Job_board",
       livelink: "https://job-board-rust-alpha.vercel.app",
-      TechStack: "Nextjs  Typescript,Tailwind Mongodb",
+      TechStack: ["Nextjs", "Typescript", "Tailwind", "Mongodb"],
       description: "Built a custom job board with advanced filters, AI powered resume tailoring, and a secure MongoDB backend with JWT authentication"
 
     },
